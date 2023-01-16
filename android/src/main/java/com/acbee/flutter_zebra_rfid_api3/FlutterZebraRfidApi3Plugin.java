@@ -121,6 +121,17 @@ public class FlutterZebraRfidApi3Plugin implements FlutterPlugin, MethodCallHand
             if (reader.isConnected()) {
                 reader.Actions.Inventory.perform();
             }
+        } catch (OperationFailureException e) {
+            System.out.println("====读取rfid操作失败异常====");
+            System.out.println("getResults：" + e.getResults());
+            System.out.println("getStatusDescription：" + e.getStatusDescription());
+            System.out.println("getVendorMessage：" + e.getVendorMessage());
+            System.out.println("========");
+        } catch (InvalidUsageException e) {
+            System.out.println("====读取rfid无效使用异常====");
+            System.out.println("getInfo：" + e.getInfo());
+            System.out.println("getVendorMessage：" + e.getVendorMessage());
+            System.out.println("========");
         } catch (java.lang.Exception e) {
             e.printStackTrace();
         }
@@ -132,6 +143,17 @@ public class FlutterZebraRfidApi3Plugin implements FlutterPlugin, MethodCallHand
             if (reader.isConnected()) {
                 reader.Actions.Inventory.stop();
             }
+        } catch (OperationFailureException e) {
+            System.out.println("====读取rfid操作失败异常====");
+            System.out.println("getResults：" + e.getResults());
+            System.out.println("getStatusDescription：" + e.getStatusDescription());
+            System.out.println("getVendorMessage：" + e.getVendorMessage());
+            System.out.println("========");
+        } catch (InvalidUsageException e) {
+            System.out.println("====读取rfid无效使用异常====");
+            System.out.println("getInfo：" + e.getInfo());
+            System.out.println("getVendorMessage：" + e.getVendorMessage());
+            System.out.println("========");
         } catch (java.lang.Exception e) {
             e.printStackTrace();
         }
